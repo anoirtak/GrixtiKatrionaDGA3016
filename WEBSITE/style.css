@@ -1,0 +1,398 @@
+@font-face {
+    font-family: 'robotomono-light';
+    src: url('font/RobotoMono-Light.woff2') format('woff2'),
+         url('font/RobotoMono-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+p {
+    font-size: 19px;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+body {
+    max-width: 100vw;
+
+    background-color: #2600ff;
+}
+
+h1 {
+    color: white
+}
+
+h2 {
+    max-width: 100vw;
+    font-family: 'Roboto Mono', sans-serif;
+    color: white;
+}
+
+h3 {
+    font-size: 32PX;
+    max-width: 100vw;
+    font-family: 'Roboto Mono', sans-serif;
+    color: white;
+}
+
+
+#cirheader {
+    max-width: 100vw;
+    font-family: 'Roboto Mono', sans-serif;
+    color: white;
+
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    overflow: visible;
+}
+
+
+
+/* NAVIGATION BAR */
+
+    .z-index-top {
+        z-index: 100;
+    }
+    .navbar {
+        position: relative;
+        z-index: 100;  
+        background-color: black;
+        padding-right: 16px;
+        padding-left: 8px;
+    }
+
+    .logo {
+        /* logo container */
+        display: flex;
+        flex-basis: 0;
+        min-height: 100px;
+        min-width: 180px;
+        justify-content: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .nav-item {
+        white-space: nowrap;
+        padding: 8px;
+
+        font-family: 'Roboto Mono', sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+
+    .btn{
+        font-family: 'Roboto Mono', sans-serif;
+        font-size: 18px;
+        background-color: grey
+
+    }
+
+    .btn:hover {
+        background-color: black;
+    }
+
+    .nav-item:hover {
+        background-color: #2600ff;
+    }
+    
+
+    /* these 'a' related statements mostly  remove the default link formatting */
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover {
+        color: inherit;
+    }
+
+    .navbar-toggler {
+        color: #2600FF ;
+    }
+
+.group-photo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+}
+
+
+
+/* STUDENTS GRID TREE IMAGE */
+
+    .linewrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .vertline {
+        position: absolute;
+        left: 50%;
+        height:1100%; /* 300% so it goes through all 3 rows */
+        border: 6px solid black;
+    }
+
+    .hlineleft {
+        position: absolute;
+        width: 60%;
+        right: 50%;
+        top: 50%;
+        border: 3px solid black;
+    }
+
+    .hlineright {
+        position: absolute;
+        width: 60%;
+        left: 50%;
+        top: 50%;
+        border: 3px solid black;
+    }
+
+    .treeimageWrapper {
+        z-index: 4;
+    }
+
+    .treeimage {
+        border: black solid 3px;
+    }
+
+
+
+/* FOOTER */
+
+.footer-bottom {
+    padding: 0 0 60px 0;
+}
+
+.footer-social i {
+        font-size: 24px;
+        vertical-align: middle;
+        box-sizing: border-box;
+       
+    }
+.footer-social a {
+    padding: 8px;
+        margin: 0 10px;
+        color: rgb(255, 255, 255);
+        border: 0;
+        
+    }
+
+/* Media Queries */
+
+@media screen and (min-width: 996px) {
+
+    #cirheader {
+        font-size: 32px;
+    }
+
+    blockquote > p {
+        font-size: 32px;
+    }
+
+    figcaption {
+        font-size: 20px;
+    }
+
+    .treeimage {
+        min-width: 30vw;
+    }
+
+
+}
+
+
+/* CSS FOR PROJECTS AND SPONSORS PAGE */
+
+.projects h1{
+    font-size: 40px;
+    font-weight: 10px;
+    border: 1px solid;
+    border-color: white;
+    padding: 15px 100px;
+    text-align: left;
+
+}
+
+.projects p{
+    margin: 10px 0 40px;
+    font-size: 15px;
+    color: white;
+    text-align:center;
+}
+
+.projectsgrid-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+.grid-content {
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(38, 0, 255);
+    width: 32%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+
+  @media only screen and (max-width: 1016px) {
+    .grid-content {
+      width: 49%;
+    }
+  }
+  @media only screen and (max-width: 663px) {
+    .grid-content {
+      width: 100%;
+    }
+  }
+
+
+ /* shake animation when hovering over project image */
+
+.grid-content:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+
+
+/* INDIVIDUAL STUDENT PROJECT PAGE*/
+
+.studentproject h1{
+    font-size: 40px;
+    font-weight: 10px;
+
+}
+.header-container{
+    border: 1px solid white;
+    text-align: center;
+    width: 100%;
+}
+
+
+img.studentimage {
+    max-width: 100%;
+}
+.student-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.studentproject h2{
+    margin: 10px 0 40px;
+    font-size: 30px;
+    color: white;
+    padding: 10px 100px;
+}
+
+.studentproject p{
+    margin: 10px 0 40px;
+    font-size: 13px;
+    color: white;
+    padding: 0px 100px;
+
+}
+
+
+
+/* STUDENTS PROJECT PAGE IMAGE CAROUSEL GENERAL CSS */
+
+.sliderclass{
+    width: 350px;
+    height: 230px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.slidesclass{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slidesclass input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 350px;
+    height: 230px;
+}
+
+
+
+/* IMAGE CAROUSEL MANUAL NAVIGATION */
+
+.navigation-manual{
+    position:absolute;
+    width: 350px;
+    margin-top: 40px;
+    display:flex;
+    justify-content: center;
+}
+
+.manual-button{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-button:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-button:hover{
+    background: white;
+
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+} 
